@@ -1,0 +1,23 @@
+language: minimal
+services:
+  - docker
+
+# We build the package here. Step one builds everything and then step two
+# just copies the final file onto the host.
+before_install:
+  - docker build -t sed .
+  - docker run --rm -it --mount "type=bind,src=$(pwd),dst=/host" sed /bin/sh -c "cp /build/sed-*.zip /host"
+
+# Display the SHA-256 checksum of the file
+before_deploy:
+  - sha256sum sed-*.zip
+
+deploy:
+  provider: releases
+  api_key:
+    secure: xxxxx
+  file_glob: true
+  file: "sed-*.zip"
+  skip_cleanup: true
+  on:
+    tags: true
