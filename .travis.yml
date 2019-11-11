@@ -15,7 +15,7 @@ before_deploy:
 deploy:
   provider: releases
   api_key:
-    secure: xxxxx
+    secure: U7xbR/zxsfnaQRogYfBjd4cqp5chaQLvoMWP19xEKpM7vaK1ARsjlipTbsHS/m/GSgpKOcv+JZroX91PDd5C2rMgfkPtVRw8EG1PzG43R5BwmFj+egBn4B7PJtywzNtWUd2GDR8wDGaj2OZlJgf1gbP69My/OaM3PdRszsZre/hoj0gw1vduk4L+D+qIRmq3WN79C3H1yI3XAblRrITLyT2niaPV3549A3oQnz5r4RiY5cwt6ieSU+5D7WU/qnYvxy+1LAzwm7eEO7xZV+36WdNgtEoq4N/+WBw/1mQ4yzNDkGr/S5t30VC4/A6AOA68WaV3Yg3OVtSamROgUmNxwBOWGiPhAGEWC+iknBMfef8AZFKs+EGOfEizfeKKcbDW21roGUF2yq94Id/bxphG2pqBgNFOvkTaErR+PnBSJbjyZMjGWoGcRouMAidNsxVhlS055r1nsVV9FGK30QXDiylECar7l5IeLa0cSblDHrbZWy99SN9/11cUvEE9ovuA4SFx2MfO6+SriGQkM6pfr+hA1mp9i+cCgDuo1rQ8QNV82Qto7r+4GEqAx8/tp1X7NdLiGoqoFCDYKQLqg13gNEHntRRdezO/Upm2L98IGWzBSXQKxmyeQO12bgP+gNcYPcGds/i07fCQxnhe4P9fLHQg/dPVA6o7R+aBSAP8izA=
   file_glob: true
   file: "sed-*.zip"
   skip_cleanup: true
